@@ -8,6 +8,7 @@ body{
 }
 
 .container {
+  max-width: 90vw;
   width: 340px;
   height: 540px;
   padding: 10px;
@@ -31,6 +32,16 @@ body{
   text-align: end;
 }
 
+.result {
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+.text {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
 .buttonBox {
   width: 100%;
   height: calc(100% - 110px);
@@ -43,7 +54,7 @@ body{
 button {
     border: none;
     background-color: rgb(108, 108, 109);
-    font-size: 24px;
+    font-size: 1.5rem;
     color: rgb(255, 255, 255);
     font-weight: bold;
     cursor: pointer;
@@ -53,4 +64,42 @@ button {
   
 button:hover {
     background-color: rgb(61, 60, 60);
+}
+
+@media screen and (max-device-height: 565px) and (orientation: landscape) {
+  .container {
+    height: 90vh;
+    width: 90vw;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .screen {
+    height: 20vh;
+  }
+
+  .result {
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  .text {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .landscape {
+    padding-right: 10px;
+    padding-bottom: 8px;
+  }
+
+  .buttonBox {
+    height: 65vh;
+    grid-gap: 5px;
+  }
+
+  button {
+    flex-grow: 1;
+  }
+
 }
